@@ -1,0 +1,381 @@
+@import "vars";
+@import "global";
+@import "fonts";
+
+
+
+// start porfolio page
+.portfolio{
+    margin-bottom: 90px;
+}
+.portfolio__btn{
+    a{
+        min-width: 250px;
+        padding: 17px 20px;
+        background-color: $gray;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+        & + a{
+            margin-left: 15px;
+        }
+        &.active{
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+.portfolio__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.portfolio__item{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: block;
+    width: 31%;
+    min-width: 240px;
+    min-height: 290px;
+    margin-bottom: 30px;
+}
+.pagination__list{
+    text-align: center;
+    li{
+        display: inline-block;
+        &+li{
+            margin-left: 10px;
+        }
+    }
+    a,
+    span{
+        border-radius: 2px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        &.active{
+            background-color: $red;
+            color: #fff;
+        }
+        &.empty{
+            background-color: transparent;
+            width: 30px;
+        }
+    }
+}
+// end portfolio page
+
+// start catalog
+.catalog-page{
+    margin-bottom: 95px;
+    &__inner{
+        display: flex;
+    }
+}
+.catalog-page__aside{
+    max-width: 280px;
+    width: 100%;
+    margin-right: 30px;
+}
+.aside__title{
+    padding: 20px 30px 20px 60px;
+    background-color: $text;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    &::before{
+        content: "\f03a";
+        font-family: 'icomoon' !important;
+        font-size: 20px;
+        color: #fff;
+        position: absolute;
+        left: 15px;
+    }
+}
+.aside__menu{
+    // border: 1px solid #e6e6e6;
+    background-color: $gray;
+    li{
+        border: 1px solid #e6e6e6;
+        a{
+            padding: 16px 15px;
+            font-size: 15px;
+            line-height: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &.active{
+                background-color: #fff;
+                color: $red;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 2px;
+                    height: 100%;
+                    background-color: $red;
+                }
+                &::after{
+                    content: "\f105";
+                    font-family: 'icomoon' !important;
+                    color: $red;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        & + li{
+            // border-bottom: 1px solid #e6e6e6;
+        }
+    }
+    &-img{
+        display: block;
+        max-width: 38px;
+        max-height: 38px;
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &-name{
+        margin-left: 10px;
+    }
+}
+
+.catalog-page__content-text{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.catalog-page__filter-btn{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    button{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+
+        border: none;
+        // background-color: $gray;
+        background-color: #eee;
+        border-radius: 2px;
+        padding: 0;
+        width: 110px;
+        height: 50px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        &.active{
+            background-color: $red;
+        }
+        & + button{
+            margin-left: 10px;
+        }
+    }
+}
+.catalog-page__sort{
+    border-radius: 2px;
+    border: 1px solid $dark-gray;
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: $gray;
+    max-width: 280px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    position: relative;
+    &::before{
+        content: "\f107";
+        font-family: 'icomoon' !important;
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+    }
+}
+.catalog-page__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.catalog-page{
+    .product-card{
+        // padding: 17px;
+        margin-bottom: 30px;
+    }
+}
+// end catalog
+
+// start company page
+.company-page{
+    padding-bottom: 30px;
+}
+.company-page__top{
+    display: flex;
+    padding-bottom: 57px;
+    border-bottom: 1px solid $dark-gray;
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+.company-page__logo{
+    max-width: 385px;
+    width: 100%;
+    min-width: 385px;
+    margin-right: 20px;
+}
+.company-page__title.title{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.company-page__text{
+    p{
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        & + p{
+            margin-top: 10px;
+        }
+    }
+}
+.company-page__team-title{
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.staff-card{
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+    &__content{
+        margin-left: 45px;
+        padding-top: 30px;
+        padding-bottom: 140px;
+        max-width: 605px;
+        height: 100%;
+        position: relative;
+    }
+    &__footer{
+        position: absolute;
+        bottom: 0;
+    }
+    &__name{
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+    &__position{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &__info{
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        a,
+        span{
+            padding-left: 25px;
+            position: relative;
+            &::before{
+                font-family: 'icomoon' !important;
+                position: absolute;
+                left: 0;
+                color: $red;
+                font-size: 16px;
+            }
+        }
+        a{
+            display: block;
+            margin-bottom: 10px;
+            &::before{
+                content: "\f095";
+            }
+        }
+        span{
+            &::before{
+                content: "\f0e0";
+            }
+        }
+    }
+    &__btn{
+        background-color: $red;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #fff;
+        padding: 17px 45px;
+    }
+}
+.company-page__inner{
+    display: flex;
+    flex-wrap: wrap;
+    .staff-card__photo{
+        margin-top: 25px;
+        min-width: 260px;
+        height: 260px;
+        img{
+            border-bottom-left-radius: 130px; // half width
+            border-bottom-right-radius: 130px; // half width  
+        }
+    }
+    .staff-card{
+        width: 49%;
+        &__content{
+            margin-left: 20px;
+            padding-top: 25px;
+            padding-bottom: 130px;
+            max-width: none;
+        }
+        &__name{
+            margin-bottom: 5px;
+        }
+        &__position{
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &__info{
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        &__btn{
+            background-color: $red;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 600;
+            color: #fff;
+            padding: 12px 25px;
+        }
+    }
+}
+// end company page
