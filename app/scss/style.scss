@@ -230,6 +230,7 @@
 .company-page{
     padding-bottom: 30px;
 }
+
 .company-page__top{
     display: flex;
     padding-bottom: 57px;
@@ -237,16 +238,19 @@
     margin-top: 15px;
     margin-bottom: 45px;
 }
+
 .company-page__logo{
     max-width: 385px;
     width: 100%;
     min-width: 385px;
     margin-right: 20px;
 }
+
 .company-page__title.title{
     margin-top: 30px;
     margin-bottom: 25px;
 }
+
 .company-page__text{
     p{
         margin: 0;
@@ -257,6 +261,7 @@
         }
     }
 }
+
 .company-page__team-title{
     font-size: 28px;
     line-height: 1.15;
@@ -333,6 +338,7 @@
         padding: 17px 45px;
     }
 }
+
 .company-page__inner{
     display: flex;
     flex-wrap: wrap;
@@ -382,24 +388,72 @@
 
 // start product-page
 .product-page{
-    padding-bottom: 30px;
-    border-bottom: 1px solid $dark-gray;
+    margin-top: 20px;
     margin-bottom: 50px;
+
     &__inner{
         display: flex;
         justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $dark-gray;
     }
+
+    &__slider-box{
+        width: 49%;
+    }
+
+    &__slider{
+        padding: 15px;
+        border: 1px solid $dark-gray;
+        margin-bottom: 30px;
+        position: relative;
+
+        .product-card-label{
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+        }
+    }
+
+    &__advantages{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        span{
+            padding-left: 32px;
+            font-size: 15px;
+            line-height: 16px;
+            position: relative;
+            & + span{
+                margin-left: 10px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 0;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
     &__content{
+        padding-top: 15px;
         max-width: 49%;
     }
+
     &__art{
         font-size: 15px;
         color: #686868;
         margin-bottom: 10px;
     }
+
     &__title.title{
         margin-bottom: 15px;
     }
+
     &__text{
         font-size: 16px;
         line-height: 22px;
@@ -411,13 +465,16 @@
             cursor: pointer;
         }
     }
+
     &__subtitle{
         font-size: 22px;
         line-height: 24px;
         font-weight: 600;
         margin-bottom: 10px;
     }
+
     &__description{
+        margin-bottom: 30px;
         dl{
             margin: 0;
             padding: 0;
@@ -434,10 +491,12 @@
             display: inline-block;
             font-size: 15px;
             line-height: 1.15;
+            color: #686868;
             position: relative;
             &::before{
                 content: ' ..........................................................................................................................................................................................';
                 left: 100%;
+                color: #686868;
                 position: absolute;
                 top: 0;
             }
@@ -448,9 +507,11 @@
             font-weight: 500;
         }
     }
+
     &__cost-info{
         margin-bottom: 35px;
     }
+
     &__cost{
         font-size: 38px;
         line-height: 1.15;
@@ -473,6 +534,7 @@
             }
         }
     }
+
     &__btn{
         display: flex;
         justify-content: space-between;
@@ -487,6 +549,7 @@
             margin-bottom: 25px;
         }
     }
+
     &__btn-shop{
         padding: 17px 20px 17px 60px;
         max-width: 290px;
@@ -502,6 +565,7 @@
             font-size: 20px;
         }
     }
+
     &__btn-serv{
         border: 1px solid $red;
         padding: 17px 40px 17px 85px;
@@ -519,8 +583,74 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-        }
-        
+        } 
     }
+}
+
+.advantages__icon{
+    &-garantee{
+        width: 100px;
+        &::before{
+            background-image: url(../images/icons/garantee.svg);
+            width: 24px;
+            height: 28px;
+        }
+    }
+    &-power{
+        width: 130px;
+        &::before{
+            background-image: url(../images/icons/power.svg);
+            width: 27px;
+            height: 19px;
+        }
+    }
+    &-protect{
+        width: 130px;
+        &::before{
+            background-image: url(../images/icons/protect.svg);
+            width: 24px;
+            height: 25px;
+        }
+    }
+    &-design{
+        width: 170px;
+        &::before{
+            background-image: url(../images/icons/design.svg);
+            width: 26px;
+            height: 23px;
+        }
+    }
+}
+
+.product-page__slider-main{
+    height: 100%;
+    margin-bottom: 25px;
+}
+
+.slider-main__item{
+    min-height: 410px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.product-page__slider-mini{
+
+    .slick-slide.slick-current.slick-active{
+        .slider-main__mini-item{
+            border: 1px solid $red;
+        }
+    }
+}
+
+.slider-main__mini-item{
+    max-width: 105px;
+    min-height: 65px;
+    border: 1px solid transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    outline: none;
+    transition: border .5s;
 }
 // end product-page
