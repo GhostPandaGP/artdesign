@@ -177,9 +177,9 @@
                             Специальные предложения:
                             <span></span>
                             <ul class="first-block__offers__list-items">
-                                <li class="first-block__offers__list-item"><a href="#">дизайнерам</a></li>
-                                <li class="first-block__offers__list-item"><a href="#">проектировщикам</a></li>
-                                <li class="first-block__offers__list-item"><a href="#">строителям</a></li>
+                                <li class="first-block__offers__list-item"><a href="#designer">дизайнерам</a></li>
+                                <li class="first-block__offers__list-item"><a href="#planner">проектировщикам</a></li>
+                                <li class="first-block__offers__list-item"><a href="#builder">строителям</a></li>
                             </ul>
                         </div>
                     </div>
@@ -312,57 +312,260 @@
                     <div class="title quiz__title">Рассчитать стоимость оборудования</div>
                     <div class="quiz__subtitle">Ответьте на несколько вопросов и получите расчет стоимости</div>
                     <div class="quiz-form">
+                        <span class="quiz-form__track">
+                        </span>
                         <form action="">
                             <div class="quiz-form__asks">
                                 <div class="quiz-form__ask">
                                     <div class="quiz-form__ask-title">Укажите свой объект?</div>
                                     <div class="quiz-form__ask-input">
                                         <section>
-                                            <label><input type="radio" name="quiz1"
+                                            <label><input type="radio" name="quiz1" value="Квартира"><span
+                                                    class="circle"></span>Квартира</label>
+                                            <label><input type="radio" name="quiz1" value="Дом"><span
+                                                    class="circle"></span>Дом</label>
+                                            <label><input type="radio" name="quiz1" value="Коммерческий объект"><span
+                                                    class="circle"></span>Коммерческий объект</label>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="quiz-form__ask">
+                                    <div class="quiz-form__ask-title">Укажите свой объект?</div>
+                                    <div class="quiz-form__ask-input">
+                                        <section>
+                                            <label><input type="checkbox" name="quiz1"
                                                     value="Квартира"><span></span>Квартира</label>
-                                            <label><input type="radio" name="quiz1" value="Дом"><span></span>Дом</label>
-                                            <label><input type="radio" name="quiz1"
+                                            <label><input type="checkbox" name="quiz1"
+                                                    value="Дом"><span></span>Дом</label>
+                                            <label><input type="checkbox" name="quiz1"
                                                     value="Коммерческий объект"><span></span>Коммерческий объект</label>
                                         </section>
                                     </div>
                                 </div>
                                 <div class="quiz-form__ask">
-
+                                    <div class="quiz-form__ask-title">Укажите свой объект?</div>
+                                    <div class="quiz-form__ask-input">
+                                        <div class="quiz-form__ask-box">
+                                            <input type="text" placeholder="Ответьте на вопрос...">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="quiz-form__ask">
-
+                                    <div class="quiz-form__ask-title">Укажите свой объект?</div>
+                                    <div class="quiz-form__ask-input">
+                                        <section>
+                                            <label><input type="radio" name="quiz1" value="Квартира"><span
+                                                    class="circle"></span>Квартира</label>
+                                            <label><input type="radio" name="quiz1" value="Дом"><span
+                                                    class="circle"></span>Дом</label>
+                                            <label><input type="radio" name="quiz1" value="Коммерческий объект"><span
+                                                    class="circle"></span>Коммерческий объект</label>
+                                        </section>
+                                    </div>
                                 </div>
                                 <div class="quiz-form__ask">
-
+                                    <div class="quiz-form__ask-title">Укажите свой объект?</div>
+                                    <div class="quiz-form__ask-input">
+                                        <section>
+                                            <label><input type="radio" name="quiz1" value="Квартира"><span
+                                                    class="circle"></span>Квартира</label>
+                                            <label><input type="radio" name="quiz1" value="Дом"><span
+                                                    class="circle"></span>Дом</label>
+                                            <label><input type="radio" name="quiz1" value="Коммерческий объект"><span
+                                                    class="circle"></span class="circle">Коммерческий объект</label>
+                                        </section>
+                                    </div>
                                 </div>
                                 <div class="quiz-form__ask">
-
-                                </div>
-                                <div class="quiz-form__ask">
-
+                                    <div class="quiz-form__ask-title">Укажите свой объект?</div>
+                                    <div class="quiz-form__ask-input">
+                                        <section>
+                                            <label><input type="radio" name="quiz1" value="Квартира"><span
+                                                    class="circle"></span>Квартира</label>
+                                            <label><input type="radio" name="quiz1" value="Дом"><span
+                                                    class="circle"></span>Дом</label>
+                                            <label><input type="radio" name="quiz1" value="Коммерческий объект"><span
+                                                    class="circle"></span>Коммерческий объект</label>
+                                        </section>
+                                    </div>
                                 </div>
                             </div>
                             <div class="quiz-form__next">
-                                <button type="submit" class="btn">Далее</button>
                                 <button type="submit" class="btn">Отправить</button>
                             </div>
                             <div class="quiz-slider__number-box">
-                                <div class="quiz-slider__number">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
-                                    <span>6</span>
+                                <div class="quiz-slider__number-content">
+                                    <div class="quiz-slider__number">
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                    </div>
                                 </div>
-                                / 6
+                                <span class="quiz-slider__total-number"></span>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
 
+            <section class="feedback">
+                <div class="container">
+                    <div class="title feedback__title">
+                        <span>Мы сами подберем </span>нужное оборудование для вашего помещения
+                    </div>
+                    <div class="feedback__inner">
+                        <div class="feedback__manager">
+                            <div class="feedback__photo staff-card__photo">
+                                <img src="images/content/staff-card4.png" alt="">
+                            </div>
+                            <div class="feedback__name">Петрова Анастасия</div>
+                            <div class="feedback__text">Менеджер по работе с клиентами</div>
+                        </div>
+                        <div class="feedback__box">
+                            <div class="feedback__header">
+                                Наш менеджер подберет оптимальный вариант <br>
+                                для Вас, также:
+                            </div>
+                            <ul class="feedback__list feedback__text">
+                                <li>Ответит на все вопросы по оборудованию, доставке и оплате</li>
+                                <li>Подберет оборудование по бюджету и потребностям</li>
+                                <li>Сориентирует по наличию и срокам поставки</li>
+                            </ul>
+                            <form class="form">
+                                <label class="form-input form-name">
+                                    <input type="text" name="name" required>
+                                    <span>Ваше имя</span>
+                                </label>
+                                <label class="form-input form-phone">
+                                    <input type="text" name="phone" required>
+                                    <span>Ваш телефон</span>
+                                </label>
+                                <button class="form-btn btn" type="submit">отправить</button>
+                                <label class="form-check">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    Я согласен на обработку персональных данных
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="offers">
+                <div class="container">
+                    <div id="designer" class="offer">
+                        <div class="offer__img">
+                            <img src="images/content/offer1.jpg" alt="">
+                            <div class="offer__img-mini" style="background-image: url(images/content/offer-mini1.png);"></div>
+                        </div>
+                        <div class="offer__description">
+                            <div class="offer__title">Условия для дизайнеров</div>
+                            <div class="offer__text">
+                                <p>
+                                    Ваша задача просто придти к нам, все нюансы сопровождения, замеров и согласования мы
+                                    берем на себя, вы получаете комиссию
+                                </p>
+                                <ol>
+                                    <li>Более 10-ти производителей России и стран Европы, сотни моделей</li>
+                                    <li>Собственное покрасочное производство</li>
+                                    <li>БЕСПЛАТНЫЙ проектный расчет</li>
+                                    <li>БЕСПЛАТНОЕ сопровождение сделки (шеф-монтаж)</li>
+                                </ol>
+                            </div>
+                            <div class="offer__subtitle">Заполните анкету и наш специалист с Вами свяжется!</div>
+                            <a href="#" class="offer__btn">заполнить анкету</a>
+                        </div>
+                    </div>
+                    <div id="planner" class="offer">
+                        <div class="offer__img">
+                            <img src="images/content/offer2.jpg" alt="">
+                            <div class="offer__img-mini" style="background-image: url(images/content/offer-mini2.png);"></div>
+                        </div>
+                        <div class="offer__description">
+                            <div class="offer__title">Проектировщикам</div>
+                            <div class="offer__text">
+                                <p>Арт-Дизайн входит в группу компаний "САУЛЕ". В портфеле нашей компании есть множество
+                                    решений , для проектирования систем отопления и водоснабжения.</p>
+                                <p>Это как стандартные приборы отопления ведущих Европейских и Отечественных
+                                    производителей, так и решения для комплексов с высотой потолков более 5 метров.</p>
+                                <p>Наши специалисты предоставят всю необходимую информацию по панельным, секционным
+                                    радиаторам. Напольным и внутрипольным конвекторам. А так же проконсультируют по
+                                    потолочным панелям отопления, которые часто применяются для отапливания спортивных
+                                    комплексов, складских помещений, производственных площадей.</p>
+                            </div>
+                            <div class="offer__subtitle">Заполните анкету и наш специалист с Вами свяжется!</div>
+                            <a href="#" class="offer__btn">заполнить анкету</a>
+                        </div>
+                    </div>
+                    <div id="builder" class="offer">
+                        <div class="offer__img">
+                            <img src="images/content/offer3.jpg" alt="">
+                            <div class="offer__img-mini" style="background-image: url(images/content/offer-mini3.png);"></div>
+                        </div>
+                        <div class="offer__description">
+                            <div class="offer__title">Строителям</div>
+                            <div class="offer__text">
+                                <p>Основное направление нашей компании, это комплектация объектов строящейся
+                                    недвижимости</p>
+                                <p>Мы сотрудничаем со всеми ведущими заводами России и готовы предложить различные
+                                    варианты оборудования для комплектации объектов в области отопления, водоснабжения и
+                                    канализации</p>
+                            </div>
+                            <div class="offer__subtitle">Заполните анкету и наш специалист с Вами свяжется!</div>
+                            <a href="#" class="offer__btn">заполнить анкету</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio">
+                <div class="container">
+                    <div class="title">Портфолио установленных радиаторов</div>
+                    <div class="portfolio__subtitle">Какой то текст о том что у нас самый крутой каталог, ведь заголовок с подтекстом всегда красиво, именно это нам и нужно</div>
+                    <div class="portfolio__items">
+                        <div class="portfolio__right-block">
+                            <div class="portfolio__right-block__up-block">
+                                <img src="images/content/portfolio-main1.jpg" alt="" class="portfolio__item">
+                            </div>
+                            <div class="portfolio__right-block__down-block">
+                                <img src="images/content/portfolio-main2.jpg" alt="" class="portfolio__item">
+                                <img src="images/content/portfolio-main3.jpg" alt="" class="portfolio__item">
+                            </div>
+                        </div>
+                        <div class="portfolio__left-block">
+                            <div class="portfolio__left-block__left-side">
+                                <img src="images/content/portfolio-main4.jpg" alt="" class="portfolio__item">
+                            </div>
+                            <div class="portfolio__left-block__right-side">
+                                <div class="portfolio__left-block__right-side__up">
+                                    <img src="images/content/portfolio-main5.jpg" alt="" class="portfolio__item">
+                                    <img src="images/content/portfolio-main6.jpg" alt="" class="portfolio__item">
+                                </div>
+                                <div class="portfolio__left-block__right-side__down portfolio__item">
+                                    <img src="images/content/portfolio-main7.jpg" alt="">
+                                    <a href="" class="portfolio-btn">Смотреть все</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="portfolio__btn btn">Смотреть все</a>
+                </div>
+            </section>
+
+            <section class="seo">
+                <div class="container">
+                    <div class="title">
+                        CEO текст
+                    </div>
+                    <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem blanditiis culpa cupiditate ea eaque eum fugit libero minus mollitia neque omnis quas quidem reiciendis, velit veritatis vitae. Commodi consequatur corporis, cumque cupiditate eaque enim error et illo iste iure labore magni minus nemo nulla obcaecati, porro possimus quidem quod reprehenderit soluta tenetur ullam veniam. Accusantium, ad at corporis, deleniti deserunt dolorem doloribus eum, eveniet excepturi exercitationem ipsam molestias neque omnis quia ratione tempore temporibus tenetur velit voluptatem voluptatibus! Dicta dolorum et exercitationem iure maiores officiis possimus voluptates. Accusantium beatae debitis error ex exercitationem id ipsam perferendis provident quae similique?
+                    </div>
+                </div>
+            </section>
 
         </div>
         <footer class="footer">

@@ -540,26 +540,55 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .quiz__title{
     margin-bottom: 20px;
 }
+
 .quiz__subtitle{
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
 }
+
 .quiz-form{
     background-color: rgba(15, 15, 15, .502);
     max-width: 830px;
     padding: 50px;
     margin: 0 auto;
+    position: relative;
 }
+
 .quiz-form__ask-title{
     margin-bottom: 40px;
     font-size: 22px;
     line-height: 1.15;
     font-weight: 600;
 }
+
+.quiz-form__track{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    span{
+        display: block;
+        height: 6px;
+        background-color: #8b8b8b;
+
+        &.active{
+            background-color: #7f1a1f;
+        }
+
+        & + span{
+            margin-left: 5px;
+        }
+    }
+
+}
+
 .quiz-form__ask-input{
     margin-bottom: 40px;
     section{
@@ -568,14 +597,357 @@
         flex-wrap: wrap;
     }
 }
-.quiz-form__ask-input label{
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 300;
-    display: inline-block;
-    padding: 0px 10px 10px;
+
+.quiz-form__ask-input{
+
+    label{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        display: inline-block;
+        margin: 0px 15px 10px;
+        position: relative;
+        padding-left: 33px;
+        cursor: pointer;
+    }
+
+    input[type=radio],
+    input[type=checkbox]{
+        display: none;
+        &:checked ~ span::before{
+            opacity: 1;
+        }
+    }
+
+    input[type=text]{
+      display: block;
+      width: 100%;
+      height: 55px;
+      border: none;
+      background-color: #efefef;
+      border-radius: 2px;
+      padding: 15px 10px 15px 20px;
+      color: #3f3f3f;
+    }
+
+    .quiz-form__ask-box{
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background-color: $red;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        &.circle{
+            border-radius: 50%;
+            &::before{     
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.quiz-form__next .btn{
+    display: none;
+}
+
+.quiz-slider__number-box{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 5px;
+}
+
+.quiz-slider__number-content{
+    //display: inline-block;
+    max-width: 15px;
+}
+
+.quiz-slider__number{
 }
 // end quiz
+
+// start feedback
+.feedback{
+    padding: 85px 0 90px;
+
+    &__title{
+        max-width: 950px;
+        margin: 0 auto 45px;
+        text-align: center;
+    }
+
+    &__inner{
+        display: flex;
+    }
+
+    &__box{
+        max-width: 615px;
+        padding: 0 20px 0 5px;
+    }
+
+    &__manager{
+        max-width: 585px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__photo{
+        margin: 30px auto 20px;
+    }
+
+    &__name{
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 600;
+    }
+
+    &__text{
+        font-size: 18px;
+        line-height: 1.15;
+    }
+
+    &__header{
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    &__list{
+        margin-bottom: 25px;
+        li{
+            padding-left: 15px;
+            position: relative;
+
+            & + li{
+                margin-top: 15px;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: $red;
+            }
+        }
+    }
+}
+// end feedback
+
+// start offers
+.offers{
+    background-color: $text;
+    color: #fff;
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+  
+  .offer{
+    margin: 90px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  
+    &__img{
+        max-width: 515px;
+        position: relative;
+      & img{
+        width: 100%;
+        display: block;
+        height: auto;
+      }
+      &-mini{
+          display: block;
+          max-width: 205px;
+          width: 100%;
+          min-height: 140px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border: 3px solid #fff;
+
+          background-color: $text;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center bottom;
+      }
+    }
+
+    &:nth-child(2n){
+        flex-direction: row-reverse;
+        .offer__img-mini{
+            left: 0;
+        }
+    }
+  
+    &__description{
+      max-width: 615px;
+      width: 100%;
+    }
+  
+    &__title{
+      font-size: 42px;
+      line-height: 46px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    &__text{
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 300;
+  
+      p{
+        margin: 10px 0;
+      }
+  
+      & ol, & ul{
+        margin: 30px 0;
+        padding: 0;
+        line-height: 34px;
+        & li{
+          padding-left: 20px;
+          position: relative;
+          &:before{
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background-color: $red;
+          }
+        }
+      }
+    }
+  
+    &__subtitle{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    &__btn{
+      padding: 15px 60px;
+      border-radius: 2px;
+      background-color: $red;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+  }
+// end offers
+
+// start portfolio
+.portfolio{
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 100px;
+  
+    &__items{
+      margin: -5px;
+      display: flex;
+
+      & img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    &__item{
+      padding: 5px;
+    }
+  
+    &__right-block{
+      display: flex;
+      flex-direction: column;
+      flex-basis: 49.9%;
+      &__up-block{
+        width: 100%;
+      }
+      &__down-block{
+        display: flex;
+        width: 100%;
+        & .portfolio_old__item{
+          width: 50%;
+        }
+      }
+    }
+  
+    &__left-block{
+      display: flex;
+      flex-basis: 49.9%;
+      &__left-side{
+      }
+      &____right-side__up{
+        height: 50%;
+      }
+    }
+  
+    &-btn{
+      text-align: center;
+      width: 100%;
+      margin-top: 22px;
+      padding: 15px;
+      color: #fff;
+      background-color: $red;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+  }
+  .portfolio__subtitle{
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 50px;
+  }
+  .portfolio__btn{
+      display: none;
+      margin: 20px 0 0;
+  }
+// end portfolio
+
+// start seo
+.seo{
+    padding-top: 85px;
+    padding-bottom: 95px;
+    background-color: $gray;
+    text-align: center;
+  
+    & .text{
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+// end seo
 
 // start footer
 .footer{
@@ -914,10 +1286,10 @@
 // end delivery page
 
 // start porfolio page
-.portfolio{
+.portfolio-page{
     margin-bottom: 90px;
 }
-.portfolio__btn{
+.portfolio-page__btn{
     a{
         min-width: 250px;
         padding: 17px 20px;
@@ -935,13 +1307,13 @@
         }
     }
 }
-.portfolio__inner{
+.portfolio-page__inner{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 30px;
 }
-.portfolio__item{
+.portfolio-page__item{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -952,7 +1324,7 @@
     min-height: 290px;
     margin-bottom: 30px;
 }
-.pagination__list{
+.pagination-page__list{
     text-align: center;
     li{
         display: inline-block;
