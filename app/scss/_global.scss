@@ -305,8 +305,10 @@ a{
 
 .staff-card__photo{
   margin-top: 30px;
+  max-width: 305px;
   min-width: 305px;
   min-height: 305px;
+  max-height: 305px;
   background-color: #f1f1f1;
   border-radius: 152.5px;
   position: relative;
