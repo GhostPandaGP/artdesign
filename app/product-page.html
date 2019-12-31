@@ -171,7 +171,7 @@
                             </ul>
                             <div class="product-page__cost-info">
                                 <div class="product-page__cost"><span>7000 ₽</span>5000 ₽</div>
-                                <div class="product-page__timer " data-date="Dec 24, 2019 04:00:00">
+                                <div class="product-page__timer " data-date="Jan 01, 2020 00:00:00">
                                     <span class="product-page__timer-text">До конца акции:</span>
                                     <span class="product-page__timer-days product-page__timer-indicator"> </span>
                                     <span class="product-page__timer-hours product-page__timer-indicator"> </span>
@@ -181,7 +181,7 @@
                             </div>
                             <div class="product-page__btn">
                                 <a href="#" class="btn product-page__btn-shop">добавить в корзину</a>
-                                <a href="#" class="product-page__btn-serv btn">консультация</a>
+                                <a href="#consult-form" class="product-page__btn-serv btn">консультация</a>
                             </div>
                         </div>
                     </div>
@@ -311,6 +311,29 @@
         <footer class="footer">
         </footer>
     </div>
+
+    <form id="consult-form" class="form popup mfp-hide white-popup-block">
+        <fieldset style="border:0;">
+            <div class="popup__title">Оставьте свои контакты</div>
+            <div class="popup__subtitle">Мы перезвоним Вам в ближайшее время</div>
+
+            <label class="form-input form-name">
+                <input type="text" name="name" required>
+                <span>Ваше имя</span>
+            </label>
+            <label class="form-input form-phone">
+                <input type="text" name="phone" required>
+                <span>Ваш телефон</span>
+            </label>
+
+            <button class="form-btn btn" type="submit">отправить</button>
+            <label class="form-check">
+                <input type="checkbox">
+                <span></span>
+                Я согласен на обработку персональных данных
+            </label>
+        </fieldset>
+    </form>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

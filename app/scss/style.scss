@@ -460,6 +460,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: -20px;
+      margin-bottom: 50px;
     }
 
     &-card{
@@ -1354,7 +1355,7 @@
 }
 // end portfolio page
 
-// start catalog
+// start catalog page
 .catalog-page{
     margin-bottom: 95px;
     &__inner{
@@ -1462,8 +1463,9 @@
 .catalog-page__filter-btn{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 15px;
-    button{
+    button,
+    span{
+        transition: .3s;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -1482,14 +1484,28 @@
 
         background-position: center;
         background-repeat: no-repeat;
-        &.active{
-            background-color: $red;
-        }
-        & + button{
-            margin-left: 10px;
-        }
+    }
+
+    label + label{
+        margin-left: 10px;
+    }
+
+    input[type=checkbox],
+    input[type=radio]{
+        display: none;
+    }
+
+    input[type=checkbox]:checked ~ span,
+    input[type=radio]:checked ~ span{
+        background-color: $red;
+        color: #fff;
     }
 }
+
+.catalog-page__filter-form{
+    margin-bottom: 40px;
+}
+
 .catalog-page__sort{
     border-radius: 2px;
     border: 1px solid $dark-gray;
@@ -1498,7 +1514,7 @@
     background-color: $gray;
     max-width: 280px;
     cursor: pointer;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     position: relative;
     &::before{
         content: "\f107";

@@ -128,7 +128,7 @@
                 </div>
             </header>
 
-            
+
             <div class="breadcrumbs">
                 <div class="container">
                     <div class="breadcrumbs__inner">
@@ -146,7 +146,8 @@
                     <div class="basket-page__card">
                         <span class="basket-page__icon-close"></span>
                         <div class="basket-page__card-info">
-                            <div class="basket-page__card-img" style="background-image: url(images/content/product-card1.jpg);"></div>
+                            <div class="basket-page__card-img"
+                                style="background-image: url(images/content/product-card1.jpg);"></div>
                             <div class="basket-page__card-box">
                                 <div class="basket-page__card-title">Zehnder Charleston</div>
                                 <div class="basket-page__card-text">Кол-во секций: <span>8</span></div>
@@ -162,9 +163,10 @@
                         <div class="basket-page__card-cost">Стоимость: <span>5000 ₽</span></div>
                     </div>
                     <div class="basket-page__card">
-                        <span class="basket-page__icon-close"></span>                        
+                        <span class="basket-page__icon-close"></span>
                         <div class="basket-page__card-info">
-                            <div class="basket-page__card-img" style="background-image: url(images/content/product-card1.jpg);"></div>
+                            <div class="basket-page__card-img"
+                                style="background-image: url(images/content/product-card1.jpg);"></div>
                             <div class="basket-page__card-box">
                                 <div class="basket-page__card-title">Zehnder Charleston</div>
                                 <div class="basket-page__card-text">Кол-во секций: <span>8</span></div>
@@ -180,8 +182,9 @@
                         <div class="basket-page__card-cost">Стоимость: <span>5000 ₽</span></div>
                     </div>
                     <div class="basket-page__total">
-                        <div class="basket-page__total-text">Итого к оплате без учета доставки: <span>10 000 ₽</span></div>
-                        <div class="basket-page__total-btn btn">оформить заказ</div>
+                        <div class="basket-page__total-text">Итого к оплате без учета доставки: <span>10 000 ₽</span>
+                        </div>
+                        <a href="#delivery-form" class="basket-page__total-btn btn">оформить заказ</a>
                     </div>
                 </div>
 
@@ -484,6 +487,65 @@
 
         </footer>
     </div>
+
+    <form id="delivery-form" class="popup-form--delivery form popup mfp-hide white-popup-block">
+        <fieldset style="border:0;">
+            <div class="popup__title">Оформить заказ</div>
+
+            <div class="popup__btns">
+                <span class="popup__btn btn  popup__btn-delivery">Доставка</span>
+                <span class="popup__btn btn off popup__btn-pickup">Самовывоз</span>
+            </div>
+
+            <div class="popup__delivery-info">
+                <div class="popup__mini-title">Адрес:</div>
+
+                <label class="form-input form-simple">
+                    <input type="text" name="city" required>
+                    <span>Город</span>
+                </label>
+                <label class="form-input form-simple">
+                    <input type="text" name="street" required>
+                    <span>Улица</span>
+                </label>
+                <label class="form-input form-simple">
+                    <input type="text" name="house" required>
+                    <span>Дом</span>
+                </label>
+                <label class="form-input form-simple">
+                    <input type="text" name="apartment" required>
+                    <span>Квартира / офис</span>
+                </label>
+            </div>
+
+            <div class="popup__mini-title">Контактные данные:</div>
+
+            <label class="form-input form-name">
+                <input type="text" name="name" required>
+                <span>Ваше имя</span>
+            </label>
+            <label class="form-input form-phone">
+                <input type="text" name="phone" required>
+                <span>Ваш телефон</span>
+            </label>
+            <label class="form-input form-question">
+                <textarea name="ask" required></textarea>
+                <span>Комментарий к заказу</span>
+            </label>
+
+            <div class="popup__cost">
+                <div class="popup__cost-title">Сумма заказа: <span>2500 ₽</span></div>
+                <div class="popup__subtitle">Доставка рассчитывается индивидуально</div>
+            </div>
+
+            <button class="form-btn btn" type="submit">отправить</button>
+            <label class="form-check">
+                <input type="checkbox">
+                <span></span>
+                Я согласен на обработку персональных данных
+            </label>
+        </fieldset>
+    </form>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
