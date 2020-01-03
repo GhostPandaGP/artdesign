@@ -34,20 +34,22 @@
   
       }
   
-      &-item{
-        display: inline-block;
-        margin-right: 30px;
-  
-        & a{
-          color: rgba(#fff, .7);
-          font-weight: 600;
-          letter-spacing: 1.5px;
-          font-size: 12px;
-          text-transform: uppercase;
-          &:hover{
-            color: rgba(#fff, 1);
+      &-items{
+          li{
+            display: inline-block;
+            margin-right: 30px;
+      
+            & a{
+              color: rgba(#fff, .7);
+              font-weight: 600;
+              letter-spacing: 1.5px;
+              font-size: 12px;
+              text-transform: uppercase;
+              &:hover{
+                color: rgba(#fff, 1);
+              }
+            }
           }
-        }
       }
     }
   
